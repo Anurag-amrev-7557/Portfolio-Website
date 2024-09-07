@@ -103,3 +103,14 @@ document.addEventListener("DOMContentLoaded", function() {
     textElement.style.setProperty('--typing-duration', `${duration}s`);
     textElement.style.setProperty('--typing-steps', `${textLength * 100}`);
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const input = document.querySelectorAll(".contact__input");
+    const submit = document.querySelector("#submit");
+
+    submit.addEventListener("click", () => {
+        for(let i=0; i<3; i++) {
+            input[i].value = "";
+        }
+    });
+});
