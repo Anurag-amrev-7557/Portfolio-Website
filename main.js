@@ -92,3 +92,14 @@ const root = document.querySelector(':root');
 const rootStyles = getComputedStyle(root);
 const firstColor = rootStyles.getPropertyValue('--first-color').trim();
 const secondColor = rootStyles.getPropertyValue('--second-color').trim();
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const textElement = document.querySelector('.text');
+    const textLength = textElement.textContent.length;
+    
+    const duration = textLength * 0.14; 
+    
+    textElement.style.setProperty('--typing-duration', `${duration}s`);
+    textElement.style.setProperty('--typing-steps', `${textLength * 100}`);
+});

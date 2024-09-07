@@ -88,6 +88,25 @@ img {
   transition: all 0.5s ease;
 }
 
+.text {
+  display: inline-block;
+  max-width: 25.75rem;
+  overflow: hidden;
+  border-right: 0.35rem solid var(--first-color);
+  white-space: nowrap;
+  animation: typing var(--typing-duration) steps(var(--typing-steps), end) alternate-reverse infinite;
+}
+
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: calc(100% - 1.5rem);;
+  }
+}
+
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
