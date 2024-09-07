@@ -407,6 +407,10 @@ img {
   margin: 0 115px;
 }
 
+.work__img {
+  border-radius: 0.8rem;
+}
+
 .footer {
   background-color: var(--second-color);
   transition: all 0.5s ease;
