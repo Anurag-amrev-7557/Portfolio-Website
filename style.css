@@ -315,6 +315,7 @@ img {
 }
 
 .skills__data {
+  border: 0.3px solid var(--first-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
