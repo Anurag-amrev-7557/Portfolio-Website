@@ -660,8 +660,8 @@ img {
 }
 
 @media screen and (max-width: 480px) {
-  .contact__form{ 
-    transform: scale(0.85);
+  .contact__form{
+    transform: scale(0.88);
     margin-right: 0.5rem;
   }
   .nav__menu {
@@ -676,6 +676,17 @@ img {
     right: 1.6rem;
     bottom: 1.6rem;
     transform: scale(0.9);
+  }
+
+  .button {
+    transform: scale(0.86);
+    margin-left: -0.6rem;
+  }
+
+  #submit {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.1rem;
   }
 }
 
