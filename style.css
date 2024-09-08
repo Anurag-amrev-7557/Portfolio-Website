@@ -753,7 +753,7 @@ input:focus + .placeholder-text .placeholder{
   transform: translate(0);
   color: black;
   background-color: transparent;
-  transition: transform 0.15s ease-out, font-size 0.15s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+  transition: transform 0.25s ease-out, font-size 0.25s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
 }
 
 input, .placeholder-text{
