@@ -48,7 +48,7 @@ const sr = ScrollReveal({
 sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
 sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
-sr.reveal('.skills__data, .work__img, .contact__input',{interval: 50}); 
+sr.reveal('.skills__data, .work__img, .contact__input .placeholder',{interval: 50}); 
 
 const check = document.querySelector("input[name=checkbox]");
 const check2 = document.querySelector("input[name=checkbox2]");
@@ -114,3 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+let input_element = document.querySelector("input");
+
+input_element.addEventListener("keyup", () => {
+    input_element.setAttribute("value", input_element.value);
+})
+
