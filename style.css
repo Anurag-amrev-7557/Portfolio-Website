@@ -345,7 +345,6 @@ img {
 }
 
 .skills__container {
-  margin-top: -5rem;
   display: grid;
   row-gap: 1rem;
   text-align: center;
@@ -451,10 +450,6 @@ img {
 
 .work__container {
   row-gap: 2rem;
-}
-
-#work {
-  margin-top: -5rem;
 }
 
 .work__img {
@@ -728,6 +723,7 @@ img {
 
   .skills__container {
     transform: scale(0.85);
+    margin-top: -5rem;
   }
 
   .skills__data {
