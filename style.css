@@ -143,12 +143,13 @@ img {
     top: var(--header-height);
     right: -100%;
     width: 80%;
-    height: 100%;
+    height: 48%;
     padding: 2rem;
     background-color: rgba(25, 23, 22, 0.7);
     backdrop-filter: blur(10px);
     transition: all 0.5s ease;
     border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
   }
 }
 
