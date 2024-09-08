@@ -730,6 +730,10 @@ img {
     transform: scale(0.85);
   }
 
+  .skills__data {
+    margin-bottom: var(--mb-3);
+  }
+
   .skills__subtitle, .skills__text {
     transform: scale(1.15);
   }
