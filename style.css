@@ -624,6 +624,10 @@ img {
   .nav__menu {
     height: 55%;
   }
+
+  .placeholder {
+    transition: transform 0.55s ease-out, font-size 0.55s ease-out, background-color 0.5s ease-out, color 0.45s ease-out;
+  }
 }
 
 @keyframes float {
