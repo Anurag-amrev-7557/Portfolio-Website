@@ -5,10 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="image" type="image/png" href="/perfil.png"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
         <title>Anurag</title>
     </head>
     <body>
+        <div class="back-to-top animate__animated">
+            <span class="material-symbols-outlined">
+                arrow_upward
+            </span>
+        </div>
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
@@ -165,12 +172,12 @@
                             </label>
                         </div>
                         <div class="input-contain">
-                            <input type="text" id="fname" name="fname" autocomplete="off" value="" aria-labelledby="placeholder-fname" class="contact__input">
-                            <label class="placeholder-text" for="fname" id="placeholder-fname">
+                            <input type="text" id="email" name="email" autocomplete="off" value="" aria-labelledby="placeholder-email" class="contact__input">
+                            <label class="placeholder-text" for="email" id="placeholder-email">
                                 <div class="placeholder">Email</div>
                             </label>
                         </div>
-                        <textarea name="" id="" cols="0" rows="5" class="contact__input textarea"></textarea>
+                        <textarea name="" id="" cols="0" rows="5" class="contact__input textarea" id="textarea"></textarea>
                         <input type="button" value="Submit" class="contact__button button" id="submit">
                     </form>
                 </div>

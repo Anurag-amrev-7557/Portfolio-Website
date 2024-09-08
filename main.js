@@ -4,11 +4,11 @@ const showMenu = (toggleId, navId) =>{
 
     if(toggle && nav){
         toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show')
-        })
+            nav.classList.toggle('show');
+        }) 
     }
 }
-showMenu('nav-toggle','nav-menu')
+showMenu('nav-toggle','nav-menu');
 
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -161,3 +161,29 @@ inputs.forEach((input) => {
     });
 });
 
+const backToTopButton = document.querySelector('.back-to-top');
+
+function checkScroll() {
+    if (window.scrollY > 650) {
+        backToTopButton.classList.remove("animate__fadeOut"); 
+        backToTopButton.style.opacity = "1";
+        backToTopButton.style.visibility = "visible";
+        backToTopButton.classList.add("animate__fadeIn");
+    } else {
+        backToTopButton.classList.remove("animate__fadeIn");
+        backToTopButton.style.opacity = "o";
+        backToTopButton.style.visibility = "hidden";
+        backToTopButton.classList.add("animate__fadeOut");
+    }
+}
+
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+checkScroll();
+
+window.addEventListener('scroll', checkScroll);

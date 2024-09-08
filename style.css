@@ -46,6 +46,43 @@ body {
   transition: all 0.5s ease;
 }
 
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 3.5rem;
+  right: 10rem;
+  background-color: var(--first-color);
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0 4px 7px 2px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease-out;
+  z-index: 1000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.back-to-top:hover {
+  transform: scale(1.05);
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--first-color);
+  color: var(--first-color)
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
 h1, h2, p {
   margin: 0;
 }
@@ -273,6 +310,7 @@ img {
   font-weight: var(--font-semi);
   border-radius: 3rem;
   transition: 0.3s;
+  user-select: none;
 }
 
 .button:hover {
@@ -629,6 +667,12 @@ img {
   .placeholder {
     transition: transform 0.55s ease-out, font-size 0.55s ease-out, background-color 0.5s ease-out, color 0.45s ease-out;
   }
+
+  .back-to-top {
+    right: 1.6rem;
+    bottom: 1.6rem;
+    transform: scale(0.9);
+  }
 }
 
 @keyframes float {
@@ -770,6 +814,7 @@ input:focus + .placeholder-text .placeholder{
   color: rgba(0, 0, 0, 0.7);
   background-color: transparent;
   padding: 0 0.5rem;
+  user-select: none;
   transition: transform 0.25s ease-out, font-size 0.25s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
 }
 
