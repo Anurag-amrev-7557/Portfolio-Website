@@ -688,6 +688,10 @@ img {
     margin-right: auto;
     font-size: 1.1rem;
   }
+  
+  #home {
+    margin-top: -1rem;
+  }
 }
 
 @keyframes float {
