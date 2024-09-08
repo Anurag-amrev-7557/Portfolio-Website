@@ -110,7 +110,16 @@ document.addEventListener("DOMContentLoaded", () => {
     submit.addEventListener("click", () => {
         for(let i=0; i<3; i++) {
             inputs[i].value = "";
+            const placeholder = document.querySelectorAll(".placeholder");
+            placeholder.forEach(ph => {
+                ph.style.transform = "translateY(25%)";
+                ph.style.fontSize = "0.9rem";
+                ph.style.color = "rgba(0,0,0)";
+                ph.style.fontWeight = "600";
+                ph.style.background = "none";
+            });
         }
+
     });
     
 });
