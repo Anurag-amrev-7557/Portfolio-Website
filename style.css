@@ -433,6 +433,9 @@ img {
   text-align: center;
   font-weight: var(--font-semi);
   padding: 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__title {
