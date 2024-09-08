@@ -621,6 +621,8 @@ img {
     transform: scale(0.9);
     margin-right: 0.5rem;
   }
+  .nav__menu {
+    height: 55%;
 }
 
 @keyframes float {
