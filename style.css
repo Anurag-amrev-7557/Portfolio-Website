@@ -398,13 +398,13 @@ img {
   width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
-  padding: 1rem;
   border-radius: 3rem;
   border: 1.5px solid var(--second-color);
   transition: all 0.5s ease;
   outline: none;
   margin-bottom: var(--mb-4);
   background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.5rem;
 }
 
 .contact__button {
@@ -723,8 +723,8 @@ input:focus{
 }
 
 input:focus + .placeholder-text .placeholder, :not(input[value=""]) + .placeholder-text .placeholder{
-  background: linear-gradient(180deg, #D1E3DD 50%, #DAE9E4);
-  font-size: 1rem;
+  background: linear-gradient(180deg, #D1E3DD 20%, #DAE9E4);
+  font-size: 0.9rem;
   color: rgba(0, 0, 0, 0.5);
   transform: translate(0, -100%);
 }
@@ -735,8 +735,8 @@ input:focus + .placeholder-text .placeholder{
 }
 
 .placeholder-text{
-  position: absolute;
-  top: -2rem;
+  position: relative;
+  top: -3.77rem;
   bottom: 0;
   left: 0;
   right: 0;
@@ -746,14 +746,21 @@ input:focus + .placeholder-text .placeholder{
   display: flex;
   align-items: center;
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .placeholder{
+  position: absolute;
   font-size: 0.9rem;
   transform: translate(0);
   color: black;
   background-color: transparent;
+  padding: 0 0.5rem;
   transition: transform 0.25s ease-out, font-size 0.25s ease-out, background-color 0.2s ease-out, color 0.15s ease-out;
+}
+
+.stuck {
+  transform: translateY(-10rem);
 }
 
 input, .placeholder-text{
@@ -763,4 +770,9 @@ input, .placeholder-text{
   
 .textarea {
   border-radius: 1.5rem;
+  font-family: var(--body-font);
+}
+
+.textarea:focus {
+  border-color: var(--first-color);
 }

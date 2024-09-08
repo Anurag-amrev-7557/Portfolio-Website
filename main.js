@@ -105,19 +105,50 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const input = document.querySelectorAll(".contact__input");
     const submit = document.querySelector("#submit");
 
     submit.addEventListener("click", () => {
         for(let i=0; i<3; i++) {
-            input[i].value = "";
+            inputs[i].value = "";
+        }
+    });
+    
+});
+
+
+const inputs = document.querySelectorAll(".contact__input");
+
+inputs.forEach((input) => {
+    const placeholder = input.nextElementSibling;
+
+    input.addEventListener("keyup", () => {
+        input.setAttribute("value", input.value);
+    });
+
+    input.addEventListener("focusout", () => {
+        if (input.value.trim() !== "") {
+            placeholder.style.transform = "translateY(-100%)";
+            placeholder.style.fontSize = "0.9rem";
+            placeholder.style.color = "var(--first-color)";
+            placeholder.style.fontWeight = "600";
+            placeholder.style.background = "linear-gradient(180deg, #D1E3DD 10%, #DAE9E4)";
+        } else {
+            placeholder.style.transform = "translateY(0)";
+            placeholder.style.fontSize = "1rem";
+            placeholder.style.color = "var(--first-color)";
+            placeholder.style.fontWeight = "600";
+            placeholder.style.background = "none";
+        }
+    });
+
+    input.addEventListener("focusin", () => {
+        if (input.value.trim() !== "") {
+            placeholder.style.transform = "translateY(-100%)";
+            placeholder.style.fontSize = "0.9rem";
+            placeholder.style.color = "var(--first-color)";
+            placeholder.style.fontWeight = "600";
+            placeholder.style.background = "linear-gradient(180deg, #D1E3DD 10%, #DAE9E4)";
         }
     });
 });
-
-let input_element = document.querySelector("input");
-
-input_element.addEventListener("keyup", () => {
-    input_element.setAttribute("value", input_element.value);
-})
 
