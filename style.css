@@ -345,7 +345,9 @@ img {
 }
 
 .skills__container {
-  row-gap: 2rem;
+  margin-top: -5rem;
+  display: grid;
+  row-gap: 1rem;
   text-align: center;
 }
 
@@ -399,15 +401,42 @@ img {
 }
 
 .skills__css {
-  width: 75%;
+  width: 80%;
 }
 
 .skills__js {
+  width: 75%;
+}
+
+.skills__mongodb{
+  width: 60%;
+}
+
+.skills__react {
+  width: 70%;
+}
+
+.skills__tailwind {
   width: 55%;
 }
 
-.skills__ux {
-  width: 75%;
+.skills__java {
+  width: 70%;
+}
+
+.skills__python {
+  width: 60%;
+}
+
+.skills__nodejs {
+  width: 60%;
+}
+.skills__bootstrap {
+  width: 60%;
+}
+
+.skills__git {
+  width: 60%;
 }
 
 .home__title-color {
@@ -422,6 +451,10 @@ img {
 
 .work__container {
   row-gap: 2rem;
+}
+
+#work {
+  margin-top: -5rem;
 }
 
 .work__img {
@@ -691,6 +724,14 @@ img {
   
   #home {
     margin-top: -1rem;
+  }
+
+  .skills__container {
+    transform: scale(0.85);
+  }
+
+  .skills__subtitle, .skills__text {
+    transform: scale(1.15);
   }
 }
 
