@@ -58,7 +58,7 @@ body {
    width: 1.5rem;
    height: 1.5rem;
    margin-right: 1rem;
-   background-color: var(--first-color);
+   backdrop-shadow: var(--first-color);
 }
 
 .back-to-top {
