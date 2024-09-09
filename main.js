@@ -69,6 +69,7 @@ check.addEventListener('change', (event) => {
         body.style.backgroundColor = '#D1E3DD';
         header.style.backgroundColor = '#D1E3DD';
         root.style.setProperty('--first-color', '#4169E1');
+        logo.setAttribute("src", "logo-blue.png");
     }
 });
 
@@ -79,12 +80,14 @@ check2.addEventListener('change', (event) => {
         body.style.backgroundColor = '#F4FDFF';
         header.style.backgroundColor = '#F4FDFF';
         root.style.setProperty('--first-color', '#5B7553');
+        logo.setAttribute("src", "logo-green.png");
     } else {
         switch2.style.backgroundColor = '#FF7F11';
         switch3.style.backgroundColor = '#FF7F11';
         body.style.backgroundColor = '#FFFDD0';
         header.style.backgroundColor = '#FFFDD0';
         root.style.setProperty('--first-color', '#FF7F11');
+        logo.setAttribute("src", "logo-orange.png");
     }
 });
 
