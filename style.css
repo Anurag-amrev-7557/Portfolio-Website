@@ -47,6 +47,15 @@ body {
   overflow-x: hidden;
 }
 
+.logo {
+   display: flex;
+}
+
+.logo img {
+   width: 2rem;
+   height: 2rem;
+}
+
 .back-to-top {
   display: flex;
   justify-content: center;
