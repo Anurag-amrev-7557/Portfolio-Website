@@ -58,7 +58,7 @@ body {
    width: 1.5rem;
    height: 1.5rem;
    margin-right: 1rem;
-   backdrop-shadow: var(--first-color);
+   filter: invert(1);
 }
 
 .back-to-top {
