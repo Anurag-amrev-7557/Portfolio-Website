@@ -194,7 +194,7 @@ window.addEventListener('scroll', checkScroll);
 
 document.querySelector('.btn').addEventListener('click', function(event) {
     const screenWidth = window.innerWidth;
-
+    event.preventDefault();
     if (screenWidth < 480) {
         document.querySelector('.contact__form').submit();
     } else {
