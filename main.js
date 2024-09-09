@@ -197,3 +197,20 @@ const button = document.querySelector(".btn");
 button.addEventListener("click", (e) => {
     e.preventDefault();
 })
+
+document.querySelector('.btn').addEventListener('click', function(event) {
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 480) {
+        // Submit immediately for screens smaller than 480px
+        document.querySelector('.contact__form').submit();
+    } else {
+        // Existing behavior for larger screens
+        const btn = event.currentTarget;
+        if (!btn.classList.contains('clicked')) {
+            btn.classList.add('clicked');
+        } else if (btn.classList.contains('clicked')) {
+            document.querySelector('.contact__form').submit();
+        }
+    }
+});
