@@ -584,6 +584,11 @@ img {
     padding-top: 2rem;
   }
 
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .contact__container {
     justify-items: center;
   }
@@ -629,6 +634,11 @@ img {
   .nav__link {
     color: var(--second-color);
     transition: all 0.5s ease;
+  }
+
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .home {
@@ -683,6 +693,11 @@ img {
     padding: 10rem 0 2rem;
   }
 
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .home__img {
     width: 450px;
   }
@@ -695,6 +710,11 @@ img {
   }
   .nav__menu {
     height: 55%;
+  }
+
+  .btn {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .placeholder {
@@ -895,4 +915,67 @@ input, .placeholder-text{
 
 .textarea:focus {
   border-color: var(--first-color);
+}
+
+.btn {
+  position: relative;
+  outline: 0;
+  border: 1px solid transparent;
+  background-color: var(--first-color);
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 1.5rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+}
+
+.btn span {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all .4s ease;
+}
+
+button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.btn span:nth-child(2),.btn span:nth-child(3) {
+  position: absolute;
+  top: 40px;
+  color: #fff;
+}
+
+.btn span:nth-child(2) {
+  background-color: var(--first-color);
+}
+
+.btn span:nth-child(3) {
+  background-color: var(--first-color);
+}
+
+.btn:hover {
+  box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+}
+
+.btn:hover span:nth-child(2), .btn:focus span:nth-child(3) {
+  top: 0;
+}
+
+.btn:focus {
+  box-shadow: none;
 }

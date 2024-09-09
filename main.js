@@ -106,15 +106,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", () => {
     const submit = document.querySelector("#submit");
+    const button = document.querySelector(".btn");
+    const Allinputs = document.querySelectorAll(".contact__input");
 
-    submit.addEventListener("click", () => {
+    button.addEventListener("click", () => {
         for(let i=0; i<3; i++) {
-            inputs[i].value = "";
+            Allinputs[i].value = "";
             const placeholder = document.querySelectorAll(".placeholder");
             placeholder.forEach(ph => {
                 ph.style.transform = "translateY(25%)";
                 ph.style.fontSize = "0.9rem";
-                ph.style.color = "rgba(0,0,0)";
+                ph.style.color = "rgba(0,0,0, 0.7)";
                 ph.style.fontWeight = "600";
                 ph.style.background = "none";
             });
@@ -125,7 +127,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const inputs = document.querySelectorAll(".contact__input");
+
+
+const inputs = document.querySelectorAll(".contact__input:not(.textarea)");
 
 inputs.forEach((input) => {
     const placeholder = input.nextElementSibling;
@@ -187,3 +191,9 @@ backToTopButton.addEventListener('click', () => {
 checkScroll();
 
 window.addEventListener('scroll', checkScroll);
+
+const button = document.querySelector(".btn");
+
+button.addEventListener("click", (e) => {
+    e.preventDefault();
+})
