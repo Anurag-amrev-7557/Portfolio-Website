@@ -198,7 +198,9 @@ document.querySelector('.btn').addEventListener('click', function(event) {
     if (screenWidth < 480) {
         document.querySelector('.contact__form').submit();
     } else {
-        location.reload();
+        setTimeout(function(){
+            location.reload();
+        }, 3000);
         if (!btn.classList.contains('clicked')) {
             btn.classList.add('clicked');
         } else if (btn.classList.contains('clicked')) {
