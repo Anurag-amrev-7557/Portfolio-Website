@@ -196,10 +196,7 @@ document.querySelector('.btn').addEventListener('click', function(event) {
     const screenWidth = window.innerWidth;
     event.preventDefault();
     if (screenWidth < 480) {
-        function reload() {
-          location.reload();
-        }
-        document.querySelector('.contact__form').reload;
+        document.querySelector('.contact__form').submit();
     } else {
         setTimeout(function(){
             location.reload();
