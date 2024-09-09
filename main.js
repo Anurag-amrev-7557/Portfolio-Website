@@ -200,7 +200,7 @@ document.querySelector('.btn').addEventListener('click', function(event) {
     } else {
         setTimeout(function(){
             location.reload();
-        }, 3000);
+        }, 1000);
         if (!btn.classList.contains('clicked')) {
             btn.classList.add('clicked');
         } else if (btn.classList.contains('clicked')) {
