@@ -192,12 +192,6 @@ checkScroll();
 
 window.addEventListener('scroll', checkScroll);
 
-const button = document.querySelector(".btn");
-
-button.addEventListener("click", (e) => {
-    e.preventDefault();
-})
-
 document.querySelector('.btn').addEventListener('click', function(event) {
     const screenWidth = window.innerWidth;
 
