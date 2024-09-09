@@ -196,11 +196,12 @@ document.querySelector('.btn').addEventListener('click', function(event) {
     const screenWidth = window.innerWidth;
 
     if (screenWidth < 480) {
-        // Submit immediately for screens smaller than 480px
         document.querySelector('.contact__form').submit();
     } else {
-        // Existing behavior for larger screens
         const btn = event.currentTarget;
+        setTimeout(function() {
+           window.location.reload();
+        }, 5000);
         if (!btn.classList.contains('clicked')) {
             btn.classList.add('clicked');
         } else if (btn.classList.contains('clicked')) {
