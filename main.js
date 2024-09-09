@@ -199,7 +199,7 @@ document.querySelector('.btn').addEventListener('click', function(event) {
         function reload() {
           location.reload();
         }
-        document.querySelector('.contact__form').reload();
+        document.querySelector('.contact__form').reload;
     } else {
         setTimeout(function(){
             location.reload();
