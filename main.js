@@ -54,6 +54,7 @@ const check = document.querySelector("input[name=checkbox]");
 const check2 = document.querySelector("input[name=checkbox2]");
 const switch2 = document.querySelector('.switch2');
 const switch3 = document.querySelector('.switch');
+const logo = document.querySelector(".logo-image");
 
 check.addEventListener('change', (event) => {
     if (event.target.checked) {
@@ -61,6 +62,7 @@ check.addEventListener('change', (event) => {
         body.style.backgroundColor = '#FFFDD0';
         header.style.backgroundColor = '#FFFDD0';
         root.style.setProperty('--first-color', '#FF7F11');
+        logo.setAttribute("src", "logo-orange.png");
     } else {
         switch2.style.backgroundColor = '#4169E1';
         switch3.style.backgroundColor = '#4169E1';
