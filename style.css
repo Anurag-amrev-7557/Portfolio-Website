@@ -51,12 +51,14 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   cursor: pointer;
 }
 
 .logo img {
    width: 1.5rem;
    height: 1.5rem;
    margin-right: 1rem;
+   color: var(--first-color);
 }
 
 .back-to-top {
