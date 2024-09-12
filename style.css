@@ -47,6 +47,10 @@ body {
   overflow-x: hidden;
 }
 
+::placeholder {
+   background-color: var(--first-color);
+}
+
 .logo {
    display: flex;
    justify-content: center;
