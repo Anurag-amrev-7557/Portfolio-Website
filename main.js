@@ -74,7 +74,6 @@ const check2 = document.querySelector("input[name=checkbox2]");
 const switch2 = document.querySelector('.switch2');
 const switch3 = document.querySelector('.switch');
 const logo = document.querySelector(".logo-image");
-const navMenu = document.querySelector(".nav__menu");
 
 check.addEventListener('change', (event) => {
     if (event.target.checked) {
@@ -82,7 +81,6 @@ check.addEventListener('change', (event) => {
         body.style.backgroundColor = '#FFFDD0';
         header.style.backgroundColor = '#FFFDD0';
         root.style.setProperty('--first-color', '#FF7F11');
-        navMenu.style.boxShadow = "0px -25px 20px -20px rgba(255, 127, 17, 0.45), 0px 25px 20px -20px rgba(255, 127, 17, 0.45), -25px 0 20px -20px rgba(255, 127, 17, 0.45)";
         logo.setAttribute("src", "logo-orange.png");
     } else {
         switch2.style.backgroundColor = '#4169E1';
@@ -90,7 +88,6 @@ check.addEventListener('change', (event) => {
         body.style.backgroundColor = '#D1E3DD';
         header.style.backgroundColor = '#D1E3DD';
         root.style.setProperty('--first-color', '#4169E1');
-        navMenu.style.boxShadow = "0px -25px 20px -20px rgba(65, 105, 225, 0.45), 0px 25px 20px -20px rgba(65, 105, 225, 0.45), -25px 0 20px -20px rgba(65, 105, 225, 0.45)";
         logo.setAttribute("src", "logo-blue.png");
     }
 });
@@ -102,7 +99,6 @@ check2.addEventListener('change', (event) => {
         body.style.backgroundColor = '#F4FDFF';
         header.style.backgroundColor = '#F4FDFF';
         root.style.setProperty('--first-color', '#5B7553');
-        navMenu.style.boxShadow = "0px -25px 20px -20px rgba(91, 117, 83, 0.45), 0px 25px 20px -20px rgba(91, 117, 83, 0.45), -25px 0 20px -20px rgba(91, 117, 83, 0.45)";
         logo.setAttribute("src", "logo-green.png");
     } else {
         switch2.style.backgroundColor = '#FF7F11';
@@ -110,7 +106,6 @@ check2.addEventListener('change', (event) => {
         body.style.backgroundColor = '#FFFDD0';
         header.style.backgroundColor = '#FFFDD0';
         root.style.setProperty('--first-color', '#FF7F11');
-        navMenu.style.boxShadow = "0px -25px 20px -20px rgba(255, 127, 17, 0.45), 0px 25px 20px -20px rgba(255, 127, 17, 0.45), -25px 0 20px -20px rgba(255, 127, 17, 0.45)";
         logo.setAttribute("src", "logo-orange.png");
     }
 });
