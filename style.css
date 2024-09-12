@@ -767,6 +767,10 @@ img {
     margin-top: -1rem;
   }
 
+  .home__img {
+     margin-top: 3rem;
+  }
+
   .skills__container {
     transform: scale(0.85);
     margin-top: -5rem;
