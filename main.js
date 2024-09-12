@@ -8,16 +8,16 @@ const showMenu = (toggleId, navId) =>{
         }) 
     }
 }
-showMenu('nav-toggle','nav-menu');
+showMenu('burger','nav-menu');
 
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    navMenu.classList.remove('show')
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show');
 }
-navLink.forEach(n => n.addEventListener('click', linkAction))
-const sections = document.querySelectorAll('section[id]')
+navLink.forEach(n => n.addEventListener('click', linkAction));
+const sections = document.querySelectorAll('section[id]');
 
 const scrollActive = () =>{
     const scrollDown = window.scrollY
@@ -35,8 +35,27 @@ const scrollActive = () =>{
         }                                                    
     })
 }
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive);
 
+const home = document.getElementsByClassName('home');
+const footer = document.getElementsByClassName('footer');
+const skills = document.getElementsByClassName('section');
+const burger = document.querySelector('.burger input');
+
+
+function hider(el) {
+    for (let i = 0; i < el.length; i++) {
+        el[i].addEventListener('click', () => {
+          const navMenu = document.getElementById('nav-menu');
+          burger.checked = false;
+          navMenu.classList.remove('show');
+        });
+      }
+}
+
+hider(home);
+hider(skills);
+hider(footer);
 
 const sr = ScrollReveal({
     origin: 'top',
