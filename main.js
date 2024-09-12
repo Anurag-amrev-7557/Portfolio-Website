@@ -188,7 +188,7 @@ function scrollToTop(duration) {
 }
 
 backToTopButton.addEventListener('click', () => {
-    scrollToTop(500); 
+    scrollToTop(200); 
 });
 
 function checkScroll() {
