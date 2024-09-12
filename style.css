@@ -47,7 +47,7 @@ body {
   overflow-x: hidden;
 }
 
-::placeholder {
+::selection {
    background-color: var(--first-color);
 }
 
