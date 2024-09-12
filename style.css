@@ -736,6 +736,10 @@ img {
   .nav__menu {
     height: 55%;
   }
+  
+  .btn span:nth-child(2) {
+     display: none;
+  }
 
   .btn {
     margin-left: auto;
