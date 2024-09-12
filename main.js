@@ -172,6 +172,25 @@ inputs.forEach((input) => {
 
 const backToTopButton = document.querySelector('.back-to-top');
 
+function scrollToTop(duration) {
+    const start = window.scrollY;
+    let startTime = null;
+
+    function animationScroll(time) {
+        if (!startTime) startTime = time;
+        const timeElapsed = time - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        window.scrollTo(0, start * (1 - progress));
+        if (progress < 1) requestAnimationFrame(animationScroll);
+    }
+
+    requestAnimationFrame(animationScroll);
+}
+
+backToTopButton.addEventListener('click', () => {
+    scrollToTop(1500); // Adjust the duration here (1500ms = 1.5 seconds)
+});
+
 function checkScroll() {
     if (window.scrollY > 650) {
         backToTopButton.classList.remove("animate__fadeOut"); 
@@ -180,21 +199,13 @@ function checkScroll() {
         backToTopButton.classList.add("animate__fadeIn");
     } else {
         backToTopButton.classList.remove("animate__fadeIn");
-        backToTopButton.style.opacity = "o";
+        backToTopButton.style.opacity = "0";
         backToTopButton.style.visibility = "hidden";
         backToTopButton.classList.add("animate__fadeOut");
     }
 }
 
-backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
 checkScroll();
-
 window.addEventListener('scroll', checkScroll);
 
 document.querySelector('.btn').addEventListener('click', function(event) {
