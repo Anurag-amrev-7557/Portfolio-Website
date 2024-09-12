@@ -1032,7 +1032,7 @@ input, .placeholder-text{
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  transition: all .4s ease;
+  transition: all .6s ease;
 }
 
 button svg {
