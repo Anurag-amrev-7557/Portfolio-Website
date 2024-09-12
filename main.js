@@ -210,11 +210,8 @@ backToTopButton.addEventListener('click', () => {
         top: 0,
         behaviour: 'smooth'
     });
-    function linkAction(){
-        const navMenu = document.getElementById('nav-menu');
-        navMenu.classList.remove('show');
-    }
-    navLink.forEach(n => n.addEventListener('click', linkAction));
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.remove('show');
 });
 
 checkScroll();
