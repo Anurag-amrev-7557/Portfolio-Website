@@ -172,40 +172,29 @@ inputs.forEach((input) => {
 
 const backToTopButton = document.querySelector('.back-to-top');
 
-function scrollToTop(duration) {
-    const start = window.scrollY;
-    let startTime = null;
-
-    function animationScroll(time) {
-        if (!startTime) startTime = time;
-        const timeElapsed = time - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-        window.scrollTo(0);
-        if (progress < 1) requestAnimationFrame(animationScroll);
+function checkScroll() {
+    if(window.scrollY > 650) {
+        backToTopButton.classList.remove('animate__fadeOut');
+        backToTopButton.style.opacity = '1';
+        backToTopButton.style.visibility = 'visible';
+        backToTopButton.classList.add('animate__fadeIn');
+    } else {
+        backToTopButton.classList.remove('animate__fadeIn');
+        backToTopButton.style.opacity = '0';
+        backToTopButton.style.visibility = 'hidden';
+        backToTopButton.classList.add('animate__fadeOut');
     }
-
-    requestAnimationFrame(animationScroll);
 }
 
 backToTopButton.addEventListener('click', () => {
-    scrollToTop(200); 
+    window.scrollTo({
+        top: 0,
+        behaviour: 'smooth'
+    });
 });
 
-function checkScroll() {
-    if (window.scrollY > 650) {
-        backToTopButton.classList.remove("animate__fadeOut"); 
-        backToTopButton.style.opacity = "1";
-        backToTopButton.style.visibility = "visible";
-        backToTopButton.classList.add("animate__fadeIn");
-    } else {
-        backToTopButton.classList.remove("animate__fadeIn");
-        backToTopButton.style.opacity = "0";
-        backToTopButton.style.visibility = "hidden";
-        backToTopButton.classList.add("animate__fadeOut");
-    }
-}
-
 checkScroll();
+
 window.addEventListener('scroll', checkScroll);
 
 document.querySelector('.btn').addEventListener('click', function(event) {
