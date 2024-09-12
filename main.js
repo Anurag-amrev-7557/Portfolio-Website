@@ -180,7 +180,7 @@ function scrollToTop(duration) {
         if (!startTime) startTime = time;
         const timeElapsed = time - startTime;
         const progress = Math.min(timeElapsed / duration, 1);
-        window.scrollTo(0, start * (1 - progress));
+        window.scrollTo(0);
         if (progress < 1) requestAnimationFrame(animationScroll);
     }
 
