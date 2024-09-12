@@ -49,6 +49,7 @@ body {
 
 ::selection {
    background-color: var(--first-color);
+   color: white;
 }
 
 .logo {
