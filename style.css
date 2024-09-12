@@ -1003,65 +1003,63 @@ input, .placeholder-text{
   border-color: var(--first-color);
 }
 
-.btn {
+/* From Uiverse.io by JaydipPrajapati1910 */ 
+.burger {
   position: relative;
-  outline: 0;
-  border: 1px solid transparent;
-  background-color: var(--first-color);
-  color: #ffffff;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 0.75rem 1.5rem;
-  border-radius: 3rem;
+  width: 40px;
+  height: 30px;
+  background: transparent;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  vertical-align: middle;
-  overflow: hidden;
-  box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+  display: block;
 }
 
-.btn span {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  transition: all .6s ease;
+.burger input {
+  display: none;
 }
 
-button svg {
-  width: 1.25rem;
-  height: 1.25rem;
-}
-
-.btn span:nth-child(2),.btn span:nth-child(3) {
+.burger span {
+  display: block;
   position: absolute;
-  top: 40px;
-  color: #fff;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
 }
 
-.btn span:nth-child(2) {
-  background-color: var(--first-color);
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
 }
 
-.btn span:nth-child(3) {
-  background-color: var(--first-color);
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
 }
 
-.btn:hover {
-  box-shadow: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-50%);
 }
 
-.btn:hover span:nth-child(2), .btn:focus span:nth-child(3) {
+.burger input:checked ~ span:nth-of-type(1) {
   top: 0;
+  left: 5px;
+  transform: rotate(405deg);
 }
 
-.btn:focus {
-  box-shadow: none;
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  top: 28px;
+  left: 5px;
+  transform: rotate(-405deg);
 }
