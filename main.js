@@ -200,6 +200,10 @@ window.addEventListener('scroll', checkScroll);
 document.querySelector('.btn').addEventListener('click', function(event) {
     const screenWidth = window.innerWidth;
     event.preventDefault();
+    
+    if (screenWidth < 480) {
+        document.querySelector('.contact__form') .submit();
+    } else {
         setTimeout(function(){
             location.reload();
         }, 600);
@@ -208,4 +212,5 @@ document.querySelector('.btn').addEventListener('click', function(event) {
         } else if (btn.classList.contains('clicked')) {
             document.querySelector('.contact__form').submit();
         }
+    }
 });
