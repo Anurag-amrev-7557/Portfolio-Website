@@ -268,15 +268,10 @@ img {
   cursor: pointer;
   transform: scale(0.42);
   filter: drop-shadow(0 5px 30px var(--first-color));
-  display: none;
-}
-
-.burger input {
-  display: none;
 }
 
 .burger span {
-  display: none;
+  display: block;
   position: absolute;
   height: 4px;
   width: 100%;
