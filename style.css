@@ -1007,7 +1007,7 @@ input, .placeholder-text{
   position: relative;
   outline: 0;
   border: 1px solid transparent;
-  background-color: #488aec;
+  background-color: var(--first-color);
   color: #ffffff;
   font-size: 0.75rem;
   line-height: 1rem;
@@ -1047,11 +1047,11 @@ button svg {
 }
 
 .btn span:nth-child(2) {
-  background-color: #488aec;
+  background-color: var(--first-color);
 }
 
 .btn span:nth-child(3) {
-  background-color: #488aec;
+  background-color: var(--first-color);
 }
 
 .btn:hover {
