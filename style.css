@@ -276,7 +276,7 @@ img {
 }
 
 .burger span {
-  display: block;
+  display: none;
   position: absolute;
   height: 4px;
   width: 100%;
