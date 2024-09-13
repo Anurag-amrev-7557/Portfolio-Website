@@ -837,9 +837,9 @@ img {
     transform: scale(1.15);
   }
 
-.burger {
-	display: block;
-}
+  .burger {
+    display: none;
+  }
 }
 
 @keyframes float {
