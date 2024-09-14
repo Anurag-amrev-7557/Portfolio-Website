@@ -1,21 +1,32 @@
-const showMenu = (toggleId, navId) =>{
+const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId),
-    nav = document.getElementById(navId)
+          nav = document.getElementById(navId);
 
-    if(toggle && nav){
-        toggle.addEventListener('click', ()=>{
-            nav.classList.toggle('show');
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => {
+            if (nav.classList.contains('show')) {
+                nav.classList.remove('show');
+                nav.classList.add('hide');
+            } else {
+                nav.classList.remove('hide');
+                nav.classList.add('show');
+            }
         });
     }
-}
-showMenu('burger','nav-menu');
+};
+
+showMenu('burger', 'nav-menu');
 
 const navLink = document.querySelectorAll('.nav__link');
 
-function linkAction(){
+function linkAction() {
     const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.remove('show');
+    if (navMenu.classList.contains('show')) {
+        navMenu.classList.remove('show');
+        navMenu.classList.add('hide');
+    }
 }
+
 navLink.forEach(n => n.addEventListener('click', linkAction));
 const sections = document.querySelectorAll('section[id]');
 
@@ -57,7 +68,6 @@ hider(home);
 hider(skills);
 hider(footer);
 
-const hamburger = document.querySelector("#hamburger");
 const navList = document.querySelector(".nav__list");
 
 const sr = ScrollReveal({
