@@ -244,7 +244,7 @@ img {
 
 .nav__logo {
   color: var(--second-color);
-  transition: all 0.5s ease;
+  /*transition: all 0.5s ease; */
 }
 
 .nav__toggle {
