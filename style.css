@@ -267,6 +267,12 @@ img {
 
 .show {
   right: -9rem;
+  animation: popin 0.4s ease;
+}
+
+@keyframes popin {
+  0% {transform: scale(0)}
+  100% {transform: scale(1)}
 }
 
 .home {
