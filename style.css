@@ -82,7 +82,7 @@ body {
   width: 3rem;
   border-radius: 50%;
   text-align: center;
-  box-shadow: 0 4px 10px 2px rgba(128, 177, 161, 0.5);
+  box-shadow: 0 4px 7px 2px rgba(0, 0, 0, 0.2);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease-out;
@@ -213,7 +213,7 @@ img {
     border-top-left-radius: 2rem;
     border-bottom-left-radius: 2rem;
     border: 1px solid var(--second-color);
-    margin-top: 1%;
+    margin-top: 0.5%;
   }
 }
 
@@ -754,6 +754,23 @@ img {
 
   #switch {
     margin-left: -0.5rem;
+  }
+
+  .professional {
+    transform: scale(0.95);
+  }
+
+  .about__text {
+    transform: scale(0.95);
+  }
+
+  .about__subtitle {
+    transform: scale(0.95);
+  }
+
+  .about__img {
+    transform: scale(0.95);
+    margin-left: 2.5rem;
   }
 
   .btn {
