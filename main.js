@@ -70,6 +70,32 @@ hider(footer);
 
 const navList = document.querySelector(".nav__list");
 
+if(window.innerWidth >= 480) {
+    document.querySelector(".github").style.display = "flex";
+    document.querySelector(".linkedin").style.display = "flex";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    if(window.innerWidth >=1270) {
+        document.querySelector(".github").style.display = "flex";
+        document.querySelector(".linkedin").style.display = "flex";
+    } else {
+        document.querySelector(".github").style.display = "none";
+        document.querySelector(".linkedin").style.display = "none";
+    }
+    window.addEventListener("resize", () => {
+        if(window.innerWidth >= 1270) {
+            document.querySelector(".github").style.display = "flex";
+            document.querySelector(".linkedin").style.display = "flex";
+        } else {
+            document.querySelector(".github").style.display = "none";
+            document.querySelector(".linkedin").style.display = "none";
+        }
+    });
+});
+
+
+
 const sr = ScrollReveal({
     origin: 'top',
     distance: '30px',
@@ -161,6 +187,26 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector(".btn");
     const Allinputs = document.querySelectorAll(".contact__input");
+    const github = document.querySelector(".github");
+    const linkedin = document.querySelector(".linkedin");
+
+    github.style.top = "-5.7rem";
+    github.style.right = "-5.7rem";
+    linkedin.style.top = "-5.7rem";
+    linkedin.style.left = "-5.7rem";
+
+    github.addEventListener("mouseover", () => {
+        document.querySelector(".github i").style.transform = "scale(1.1) rotate(100deg)";
+    });
+    github.addEventListener("mouseout", () => {
+        document.querySelector(".github i").style.transform = "scale(1) rotate(100deg)";
+    });
+    linkedin.addEventListener("mouseover", () => {
+        document.querySelector(".linkedin i").style.transform = "scale(1.1) rotate(180deg)";
+    });
+    linkedin.addEventListener("mouseout", () => {
+        document.querySelector(".linkedin i").style.transform = "scale(1) rotate(180deg)";
+    });
 
     button.addEventListener("click", () => {
         for(let i=0; i<3; i++) {
@@ -219,8 +265,11 @@ inputs.forEach((input) => {
 });
 
 const backToTopButton = document.querySelector('.back-to-top');
+const github = document.querySelector(".github");
 
 function checkScroll() {
+    const github = document.querySelector(".github");
+    const linkedin = document.querySelector(".linkedin");
     if(window.scrollY > 650) {
         backToTopButton.classList.remove('animate__fadeOut');
         backToTopButton.style.opacity = '1';
@@ -232,13 +281,31 @@ function checkScroll() {
         backToTopButton.style.visibility = 'hidden';
         backToTopButton.classList.add('animate__fadeOut');
     }
+
+    if(window.scrollY >= 400) {
+        github.style.top = "-10.7rem";
+        github.style.right = "-10.7rem";
+        linkedin.style.top = "-10.7rem";
+        linkedin.style.left = "-10.7rem";
+    } else if (window.scrollY === 0) {
+        github.style.top = "-5.7rem";
+        github.style.right = "-5.7rem";
+        linkedin.style.top = "-5.7rem";
+        linkedin.style.left = "-5.7rem";
+    }
 }
 
 backToTopButton.addEventListener('click', () => {
+    const github = document.querySelector(".github");
+    const linkedin = document.querySelector(".linkedin");
     window.scrollTo({
         top: 0,
         behaviour: 'smooth'
     });
+    github.style.top = "-5.7rem";
+    github.style.right = "-5.7rem";
+    linkedin.style.top = "-5.7rem";
+    linkedin.style.left = "-5.7rem";
 });
 
 checkScroll();

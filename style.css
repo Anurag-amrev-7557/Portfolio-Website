@@ -755,6 +755,12 @@ img {
   }
 }
 
+@media screen and (max-width: 1270px) {
+  .github {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .contact__form{
     transition: all 0.3s ease;
@@ -1116,4 +1122,51 @@ button svg {
   transform: rotate(-45deg);
   top: 28px;
   left: 5px;
+}
+
+.github {
+  position: fixed;
+  height: 10rem;
+  width: 10rem;
+  top: -10.7rem;
+  right: -10.7rem;
+  background-color: var(--first-color);
+  z-index: 500;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.github i {
+  z-index: 1000;
+  color: #fff;
+  font-size: 2.2rem;
+  transform: rotate(100deg);
+  margin-left: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.linkedin {
+  position: fixed;
+  height: 10rem;
+  width: 10rem;
+  top: -10.7rem;
+  left: -10.7rem;
+  background-color: var(--first-color);
+  z-index: 500;
+  transform: rotate(135deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+
+.linkedin i {
+  z-index: 1000;
+  color: #fff;
+  font-size: 1.9rem;
+  transform: rotate(180deg);
+  margin-top: 0.5rem;
+  transition: all 0.3s ease;
 }
