@@ -324,7 +324,7 @@ img {
   width: 50rem;
   height: 55rem;
   transform: scale(0.6);
-  filter: grayscale(0);
+  filter: grayscale(1);
 }
 
 .button {
