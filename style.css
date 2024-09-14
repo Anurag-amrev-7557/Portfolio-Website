@@ -567,6 +567,13 @@ img {
   }
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  #nav-menu {
+    height: 23rem;
+    padding: 1.8rem;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .home {
     padding: 4rem 0 2rem;
@@ -738,8 +745,14 @@ img {
     transform: scale(0.88);
     margin-right: 0.5rem;
   }
-  .nav__menu {
-    height: 55%;
+
+  #nav-menu {
+    height: 22.7rem;
+    padding: 1.8rem;
+  }
+
+  #switch {
+    margin-left: -0.5rem;
   }
 
   .btn {
