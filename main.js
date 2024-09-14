@@ -5,7 +5,7 @@ const showMenu = (toggleId, navId) =>{
     if(toggle && nav){
         toggle.addEventListener('click', ()=>{
             nav.classList.toggle('show');
-        }) 
+        });
     }
 }
 showMenu('burger','nav-menu');
@@ -62,7 +62,7 @@ const navList = document.querySelector(".nav__list");
 
 const sr = ScrollReveal({
     origin: 'top',
-    distance: '60px',
+    distance: '30px',
     duration: 2000,
     delay: 100,
 });
@@ -84,6 +84,7 @@ check.addEventListener('change', (event) => {
         body.style.backgroundColor = '#FFFDD0';
         header.style.backgroundColor = '#FFFDD0';
         root.style.setProperty('--first-color', '#FF7F11');
+        backToTopButton.style.boxShadow ="0 4px 10px 2px rgba(128, 177, 161, 0.5);";
         logo.setAttribute("src", "logo-orange.png");
     } else {
         switch2.style.backgroundColor = '#4169E1';
@@ -91,6 +92,7 @@ check.addEventListener('change', (event) => {
         body.style.backgroundColor = '#D1E3DD';
         header.style.backgroundColor = '#D1E3DD';
         root.style.setProperty('--first-color', '#4169E1');
+        backToTopButton.style.boxShadow ="0 4px 10px 2px rgba(128, 177, 161, 0.5)";
         logo.setAttribute("src", "logo-blue.png");
     }
 });
@@ -102,6 +104,7 @@ check2.addEventListener('change', (event) => {
         body.style.backgroundColor = '#F4FDFF';
         header.style.backgroundColor = '#F4FDFF';
         root.style.setProperty('--first-color', '#5B7553');
+        backToTopButton.style.boxShadow ="0 4px 10px 2px rgba(128, 177, 161, 0.5);";
         logo.setAttribute("src", "logo-green.png");
     } else {
         switch2.style.backgroundColor = '#FF7F11';
@@ -109,6 +112,7 @@ check2.addEventListener('change', (event) => {
         body.style.backgroundColor = '#FFFDD0';
         header.style.backgroundColor = '#FFFDD0';
         root.style.setProperty('--first-color', '#FF7F11');
+        backToTopButton.style.boxShadow ="0 4px 10px 2px rgba(128, 177, 161, 0.5);";
         logo.setAttribute("src", "logo-orange.png");
     }
 });
