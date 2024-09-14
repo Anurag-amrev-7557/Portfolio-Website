@@ -126,9 +126,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const textLength = textElement.textContent.length;
     
     const duration = textLength * 0.14; 
-    
+    if(window.innerWidth <= 480) {
+        textElement.style.maxWidth = "14.75rem";
+    }
+    if(window.innerWidth >= 480) {
+        textElement.style.maxWidth = "25.75rem";
+    }
     textElement.style.setProperty('--typing-duration', `${duration}s`);
-    textElement.style.setProperty('--typing-steps', `${textLength * 100}`);
+    textElement.style.setProperty('--typing-steps', `${textLength * 200}`);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
