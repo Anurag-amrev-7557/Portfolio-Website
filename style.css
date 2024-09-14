@@ -327,10 +327,6 @@ img {
   filter: grayscale(1);
 }
 
-.about__img { 
-  filter: grayscale(1);
-}
-
 .button {
   display: inline-block;
   background-color: var(--first-color);
