@@ -57,6 +57,9 @@ hider(home);
 hider(skills);
 hider(footer);
 
+const hamburger = document.querySelector("#hamburger");
+const navList = document.querySelector(".nav__list");
+
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',

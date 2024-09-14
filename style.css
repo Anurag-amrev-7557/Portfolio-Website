@@ -196,6 +196,10 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+  #hamburger {
+    display: block;
+  }
+
   .nav__menu {
     position: fixed;
     top: var(--header-height);
@@ -258,63 +262,6 @@ img {
   top: 1.5rem;
   background-color: var(--first-color);
   transition: all 0.5s ease;
-}
-
-.burger {
-  position: relative;
-  width: 40px;
-  height: 30px;
-  background: transparent;
-  cursor: pointer;
-  transform: scale(0.42);
-  filter: drop-shadow(0 5px 30px var(--first-color));
-}
-
-.burger span {
-  display: block;
-  position: absolute;
-  height: 4px;
-  width: 100%;
-  background: black;
-  border-radius: 9px;
-  opacity: 1;
-  left: 0;
-  transform: rotate(0deg);
-  transition: .25s ease-in-out;
-}
-
-.burger span:nth-of-type(1) {
-  top: 0px;
-  transform-origin: left center;
-}
-
-.burger span:nth-of-type(2) {
-  top: 50%;
-  transform: translateY(-50%);
-  transform-origin: left center;
-}
-
-.burger span:nth-of-type(3) {
-  top: 100%;
-  transform-origin: left center;
-  transform: translateY(-100%);
-}
-
-.burger input:checked ~ span:nth-of-type(1) {
-  transform: rotate(45deg);
-  top: 0px;
-  left: 5px;
-}
-
-.burger input:checked ~ span:nth-of-type(2) {
-  width: 0%;
-  opacity: 0;
-}
-
-.burger input:checked ~ span:nth-of-type(3) {
-  transform: rotate(-45deg);
-  top: 28px;
-  left: 5px;
 }
 
 .show {
@@ -676,6 +623,11 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+
+  #hamburger {
+    display: none;
+  }
+
   body {
     margin: 0;
   }
@@ -706,10 +658,6 @@ img {
   .nav__item {
     margin-left: var(--mb-6);
     margin-bottom: 0;
-  }
-  
-  .burger {
-    display: none;
   }
 
   .nav__link {
@@ -837,9 +785,6 @@ img {
     transform: scale(1.15);
   }
 
-  .burger {
-    display: none;
-  }
 }
 
 @keyframes float {
@@ -1073,6 +1018,7 @@ button svg {
   background: transparent;
   cursor: pointer;
   display: block;
+  transform: scale(0.45);
 }
 
 .burger input {
@@ -1089,7 +1035,7 @@ button svg {
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .45s ease-in-out;
+  transition: .25s ease-in-out;
 }
 
 .burger span:nth-of-type(1) {
