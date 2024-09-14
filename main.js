@@ -125,7 +125,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.querySelector('.text');
     const textLength = textElement.textContent.length;
     const scalingFactor = 1.95;
+    const header = document.querySelector(".l-header");
 
+    header.classList.add("animate__animated animate__fadeInDown");
     const changeText = () => {
         textElement.textContent = "Artist";
         textElement.textContent = "Freelancer";
