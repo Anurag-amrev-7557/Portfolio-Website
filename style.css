@@ -148,7 +148,7 @@ img {
 
 .text {
   display: inline-block;
-  max-width: 25.75rem;
+  max-width: 27.75rem;
   overflow: hidden;
   border-right: 0.35rem solid var(--first-color);
   white-space: nowrap;

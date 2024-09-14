@@ -124,20 +124,29 @@ const secondColor = rootStyles.getPropertyValue('--second-color').trim();
 document.addEventListener("DOMContentLoaded", function() {
     const textElement = document.querySelector('.text');
     const textLength = textElement.textContent.length;
-    
-    const duration = textLength * 0.14; 
+    const scalingFactor = 1.95;
+
+    const changeText = () => {
+        textElement.textContent = "Artist";
+        textElement.textContent = "Freelancer";
+        textElement.textContent = "Freelancer";
+    };
+
     if(window.innerWidth <= 480) {
-        textElement.style.maxWidth = "14.75rem";
+        const newDuration = textLength * 0.12;
+        textElement.style.maxWidth = textLength + 3.1 + "rem";
+        textElement.style.setProperty('--typing-duration', `${newDuration}s`);
     }
     if(window.innerWidth >= 480) {
-        textElement.style.maxWidth = "25.75rem";
+        const duration = textLength * 0.2; 
+        textElement.style.maxWidth = textLength * scalingFactor + 3.1 + "rem";
+        textElement.style.setProperty('--typing-duration', `${duration}s`);
     }
-    textElement.style.setProperty('--typing-duration', `${duration}s`);
+    
     textElement.style.setProperty('--typing-steps', `${textLength * 200}`);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const submit = document.querySelector("#submit");
     const button = document.querySelector(".btn");
     const Allinputs = document.querySelectorAll(".contact__input");
 
