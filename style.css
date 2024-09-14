@@ -313,6 +313,7 @@ img {
   bottom: 0;
   width: 260px;
   animation: float 4s ease-in-out infinite;
+  filter: grayscale(1);
 }
 
 .home__blob {
