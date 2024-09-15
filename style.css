@@ -224,6 +224,7 @@ img {
 .nav__link {
   position: relative;
   color: #fff;
+  transition: all 0.3s ease-out;
 }
 
 .nav__link:hover {
