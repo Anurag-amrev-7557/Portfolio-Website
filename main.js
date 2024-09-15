@@ -133,9 +133,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     window.addEventListener("resize", () => {
         if(window.innerWidth >= 1270) {
+            circle.style.display = "block";
             document.querySelector(".github").style.display = "flex";
             document.querySelector(".linkedin").style.display = "flex";
         } else {
+            circle.style.display = "none";
             document.querySelector(".github").style.display = "none";
             document.querySelector(".linkedin").style.display = "none";
         }
@@ -210,6 +212,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     if(window.innerWidth <= 480) {
+        circle.style.display = "none";
         const newDuration = textLength * 0.12;
         textElement.style.maxWidth = textLength + 3.1 + "rem";
         textElement.style.setProperty('--typing-duration', `${newDuration}s`);
