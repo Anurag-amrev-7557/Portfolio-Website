@@ -52,6 +52,19 @@ body {
    color: white;
 }
 
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none; 
+  transform: translate(-50%, -50%);
+  z-index: 1000000;
+  transition: backdrop-filter 0.3s ease;
+}
+
 .logo {
    display: flex;
    justify-content: center;
@@ -1132,6 +1145,7 @@ button svg {
   display: flex;
   align-items: center;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .github i {
@@ -1156,6 +1170,7 @@ button svg {
   flex-direction: column;
   align-items: center;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .linkedin i {
@@ -1166,3 +1181,7 @@ button svg {
   margin-top: 0.5rem;
   transition: all 0.3s ease;
 }
+
+/* .animate__animated.animate__fadeOut {
+  animation-delay: -200ms;
+} */

@@ -1,3 +1,32 @@
+const navLink = document.querySelectorAll('.nav__link');
+const sections = document.querySelectorAll('section[id]');
+const home = document.getElementsByClassName('home');
+const footer = document.getElementsByClassName('footer');
+const skills = document.getElementsByClassName('section');
+const burger = document.querySelector('.burger input');
+const navList = document.querySelector(".nav__list");
+const check = document.querySelector("input[name=checkbox]");
+const check2 = document.querySelector("input[name=checkbox2]");
+const switch2 = document.querySelector('.switch2');
+const switch3 = document.querySelector('.switch');
+const switch1 = document.querySelector("#switch");
+const logo = document.querySelector(".logo-image");
+const logoContainer = document.querySelector(".logo");
+const body = document.querySelector('body');
+const header = document.querySelector('.l-header');
+const root = document.querySelector(':root');
+const rootStyles = getComputedStyle(root);
+const firstColor = rootStyles.getPropertyValue('--first-color').trim();
+const secondColor = rootStyles.getPropertyValue('--second-color').trim();
+const inputs = document.querySelectorAll(".contact__input:not(.textarea)");
+const backToTopButton = document.querySelector('.back-to-top');
+const github = document.querySelector(".github");
+const circle = document.querySelector('.circle');
+const button = document.querySelectorAll(".button");
+const socialicon = document.querySelectorAll(".home__social-icon");
+const submit = document.querySelector(".btn");
+const footerIcons = document.querySelectorAll(".footer__icon");
+
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
@@ -10,14 +39,49 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('burger','nav-menu');
 
-const navLink = document.querySelectorAll('.nav__link');
+function circlefadeOut() {
+    circle.style.backdropFilter = "blur(0px)";
+}
+
+function circlefadeIn() {
+    circle.style.backdropFilter = "blur(5px)";
+}
 
 function linkAction(){
     const navMenu = document.getElementById('nav-menu');
     navMenu.classList.remove('show');
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
-const sections = document.querySelectorAll('section[id]');
+
+navLink.forEach(n => n.addEventListener("mouseover", () => {
+    circle.style.backdropFilter = "blur(0px)";
+}));
+
+socialicon.forEach(icon => {
+    icon.addEventListener("mouseover", circlefadeOut);
+    icon.addEventListener("mouseout", circlefadeIn);
+})
+
+navLink.forEach(n => n.addEventListener("mouseout", circlefadeIn));
+
+switch1.addEventListener("mouseover", circlefadeOut);
+
+switch1.addEventListener("mouseout", circlefadeIn);
+
+button.forEach(btn => {
+    btn.addEventListener("mouseover", circlefadeOut);
+    btn.addEventListener("mouseout", circlefadeIn); 
+});
+
+logoContainer.addEventListener("mouseover", circlefadeOut);
+logoContainer.addEventListener("mouseout", circlefadeIn);
+submit.addEventListener("mouseover", circlefadeOut);
+submit.addEventListener("mouseout", circlefadeIn);
+
+footerIcons.forEach(footer => {
+    footer.addEventListener("mouseover", circlefadeOut);
+    footer.addEventListener("mouseout", circlefadeIn);
+})
 
 const scrollActive = () =>{
     const scrollDown = window.scrollY
@@ -37,10 +101,7 @@ const scrollActive = () =>{
 }
 window.addEventListener('scroll', scrollActive);
 
-const home = document.getElementsByClassName('home');
-const footer = document.getElementsByClassName('footer');
-const skills = document.getElementsByClassName('section');
-const burger = document.querySelector('.burger input');
+
 
 
 function hider(el) {
@@ -56,8 +117,6 @@ function hider(el) {
 hider(home);
 hider(skills);
 hider(footer);
-
-const navList = document.querySelector(".nav__list");
 
 if(window.innerWidth >= 480) {
     document.querySelector(".github").style.display = "flex";
@@ -97,11 +156,7 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400
 sr.reveal('.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .work__img, .contact__input .placeholder',{interval: 50}); 
 
-const check = document.querySelector("input[name=checkbox]");
-const check2 = document.querySelector("input[name=checkbox2]");
-const switch2 = document.querySelector('.switch2');
-const switch3 = document.querySelector('.switch');
-const logo = document.querySelector(".logo-image");
+
 
 check.addEventListener('change', (event) => {
     if (event.target.checked) {
@@ -138,12 +193,7 @@ check2.addEventListener('change', (event) => {
     }
 });
 
-const body = document.querySelector('body');
-const header = document.querySelector('.l-header');
-const root = document.querySelector(':root');
-const rootStyles = getComputedStyle(root);
-const firstColor = rootStyles.getPropertyValue('--first-color').trim();
-const secondColor = rootStyles.getPropertyValue('--second-color').trim();
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -186,16 +236,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     github.addEventListener("mouseover", () => {
         document.querySelector(".github i").style.transform = "scale(1.1) rotate(100deg)";
+        circlefadeOut();
     });
     github.addEventListener("mouseout", () => {
         document.querySelector(".github i").style.transform = "scale(1) rotate(100deg)";
+        circlefadeIn();
     });
     linkedin.addEventListener("mouseover", () => {
         document.querySelector(".linkedin i").style.transform = "scale(1.1) rotate(180deg)";
+        circlefadeOut();
     });
     linkedin.addEventListener("mouseout", () => {
         document.querySelector(".linkedin i").style.transform = "scale(1) rotate(180deg)";
+        circle.style.backdropFilter = "blur(5px)";
+        circlefadeIn();
     });
+
+    Allinputs.forEach(input => {
+        input.addEventListener("mouseover", circlefadeOut);
+        input.addEventListener("mouseout", circlefadeIn);
+    })
 
     button.addEventListener("click", () => {
         for(let i=0; i<3; i++) {
@@ -217,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-const inputs = document.querySelectorAll(".contact__input:not(.textarea)");
+
 
 inputs.forEach((input) => {
     const placeholder = input.nextElementSibling;
@@ -253,8 +313,7 @@ inputs.forEach((input) => {
     });
 });
 
-const backToTopButton = document.querySelector('.back-to-top');
-const github = document.querySelector(".github");
+
 
 function checkScroll() {
     const github = document.querySelector(".github");
@@ -297,6 +356,14 @@ backToTopButton.addEventListener('click', () => {
     linkedin.style.left = "-5.7rem";
 });
 
+backToTopButton.addEventListener("mouseover", () => {
+    circle.style.backdropFilter = "blur(0px)";
+});
+
+backToTopButton.addEventListener("mouseout", () => {
+    circle.style.backdropFilter = "blur(5px)";
+});
+
 checkScroll();
 
 window.addEventListener('scroll', checkScroll);
@@ -316,4 +383,14 @@ document.querySelector('.btn').addEventListener('click', function(event) {
             document.querySelector('.contact__form').submit();
         }
       }
+});
+
+
+
+document.addEventListener('mousemove', (e) => {
+    const clientX = e.clientX ;
+    const clientY = e.clientY ;
+
+    circle.style.left = `${clientX}px`;
+    circle.style.top = `${clientY}px`;
 });
