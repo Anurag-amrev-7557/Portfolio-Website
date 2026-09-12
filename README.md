@@ -125,7 +125,7 @@ tsconfig.json                    # TypeScript configuration
 
 ```bash
 # Clone the repository
-git clone https://github.com/anuragverma08002/portfolio.git
+git clone https://github.com/Anurag-amrev-7557/Portfolio-Website
 cd portfolio
 
 # Install dependencies
@@ -202,7 +202,7 @@ Firebase hosting config is in `firebase.json`:
 }
 ```
 
-Visit the live site: [anuragverma.dev](https://anuragverma.dev)
+Visit the live site: [anuragverma.web.app](https://anuragverma.web.app)
 
 ---
 
@@ -402,10 +402,10 @@ See `.planning/codebase/CONCERNS.md` for detailed tracking.
 
 ## 📧 Contact
 
-- **Website:** [anuragverma.dev](https://anuragverma.dev)
-- **Email:** [your-email@example.com]
-- **LinkedIn:** [linkedin.com/in/anuragverma](https://linkedin.com/in/anuragverma)
-- **GitHub:** [@anuragverma08002](https://github.com/anuragverma08002)
+- **Website:** [anuragverma.web.app](https://anuragverma.web.app)
+- **Email:** [mindreaders7557@gmail.com]
+- **LinkedIn:** [linkedin.com/in/anuragverma75](https://www.linkedin.com/in/anuragverma75/)
+- **GitHub:** [@anurag-amrev-7557](https://github.com/Anurag-amrev-7557/)
 
 ---
 
@@ -429,6 +429,6 @@ This portfolio is personal work. Feel free to use it as inspiration for your own
 
 **Built with ❤️ using Next.js, React, and TypeScript**
 
-*Scroll through the portfolio →* [anuragverma.dev](https://anuragverma.dev)
+*Scroll through the portfolio →* [anuragverma.web.app](https://anuragverma.web.app)
 
 </div>
